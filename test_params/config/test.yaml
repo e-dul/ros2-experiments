@@ -1,0 +1,25 @@
+/**:
+  ros__parameters:
+    validators:
+      - name: parameter1
+        validator: [1.0,2.0,3.0]
+      - name: parameter2
+        validator: [0.0,1.0,2.0,3.0]
+    testers:
+      - name: p1
+        tester: [1.0,2.0,3.0]
+      - name: p2
+        tester: [1.0,2.0,3.0]
+test_node:
+  ros__parameters:
+    validator1: 
+      name: "array_with_values"
+      value: 123
+    validators:
+      param1: [1, 1]
+      param2: [2, 2]
+my_node:
+  ros__parameters:
+    validators:
+      name: parameter1
+      validator: [1.0,2.0,3.0]
