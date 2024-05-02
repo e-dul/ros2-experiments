@@ -20,7 +20,14 @@ target_include_directories(my_node PUBLIC
   $<INSTALL_INTERFACE:include>)
 target_compile_features(my_node PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 
-install(TARGETS my_node
+add_executable(my_node_alt src/my_node_alt.cpp)
+ament_target_dependencies(my_node_alt rclcpp ament_index_cpp)
+target_include_directories(my_node_alt PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>)
+target_compile_features(my_node_alt PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+
+install(TARGETS my_node my_node_alt
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)

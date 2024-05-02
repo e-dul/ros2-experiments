@@ -1,0 +1,10 @@
+my_node_alt:
+  ros__parameters:
+    test: 123
+    validators:
+      validator1:
+        name: parameter1
+        validator: [1.0,2.0,3.0]
+      validator2:
+        name: parameter2
+        validator: [0.0,1.0,2.0,3.0]
