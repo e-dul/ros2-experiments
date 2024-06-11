@@ -5,6 +5,12 @@ my_node_alt:
       validator1:
         name: parameter1
         validator: [1.0,2.0,3.0]
+        more:
+          param1: 1
+          param2: 2 
       validator2:
         name: parameter2
         validator: [0.0,1.0,2.0,3.0]
+        more:
+          param21: 21
+          param22: 22
